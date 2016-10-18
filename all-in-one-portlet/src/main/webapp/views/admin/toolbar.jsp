@@ -1,17 +1,15 @@
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
 <%@page import="com.kuongbk.search.BookDisplayTerms"%>
-<%@page import="javax.portlet.PortletURL"%>
-<%@ include file="../init.jsp" %>
+<%@ include file="init.jsp" %>
 <%
-	String tabLink = ParamUtil.getString(request, "book");
-	PortletURL portletURL = renderResponse.createRenderURL();
 	BookDisplayTerms displayTerms = new BookDisplayTerms(request);
 %>
 <aui:nav-bar>
 	<aui:nav>
 		<%portletURL.setParameter("tabLink", "book"); %>
-		<aui:nav-item cssClass="active" selected="true" label="book" href="<%=portletURL.toString() %>" />
+		<aui:nav-item cssClass='<%=tabLink.equals("book")? "active" : StringPool.BLANK %>' selected='<%=tabLink.equals("book") %>' label="book" href="<%=portletURL.toString() %>" />
 		<%portletURL.setParameter("tabLink", "author"); %>
-		<aui:nav-item label="author" href="<%=portletURL.toString() %>"/>
+		<aui:nav-item cssClass='<%=tabLink.equals("author")? "active" : StringPool.BLANK %>' selected='<%=tabLink.equals("author") %>' label="author" href="<%=portletURL.toString() %>"/>
 	</aui:nav>
 	<aui:nav-bar-search cssClass="pull-right">
 		<liferay-ui:search-toggle

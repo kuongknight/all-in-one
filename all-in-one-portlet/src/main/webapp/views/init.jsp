@@ -4,6 +4,7 @@
 <%@page import="com.liferay.portal.kernel.language.LanguageUtil"%>
 <%@page import="javax.portlet.WindowState"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
+<%@page import="javax.portlet.PortletURL"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
