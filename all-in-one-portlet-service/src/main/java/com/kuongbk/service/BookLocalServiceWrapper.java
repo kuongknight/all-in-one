@@ -478,6 +478,16 @@ public class BookLocalServiceWrapper implements BookLocalService,
         return _bookLocalService.invokeMethod(name, parameterTypes, arguments);
     }
 
+    @Override
+    public com.kuongbk.model.Book updateBook(long id, java.lang.String name,
+        java.lang.String description, java.util.Date publishDate,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return _bookLocalService.updateBook(id, name, description, publishDate,
+            serviceContext);
+    }
+
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

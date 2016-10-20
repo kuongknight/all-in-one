@@ -4,7 +4,7 @@
 	<portlet>
 		<portlet-name>all-in-one</portlet-name>
 		<display-name>all-in-one</display-name>
-		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<portlet-class>com.kuongbk.portlet.book.BookAdminPortlet</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/views/admin/view.jsp</value>

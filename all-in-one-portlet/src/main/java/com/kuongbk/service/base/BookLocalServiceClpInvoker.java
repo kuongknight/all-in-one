@@ -85,6 +85,8 @@ public class BookLocalServiceClpInvoker {
     private String[] _methodParameterTypes76;
     private String _methodName77;
     private String[] _methodParameterTypes77;
+    private String _methodName82;
+    private String[] _methodParameterTypes82;
 
     public BookLocalServiceClpInvoker() {
         _methodName0 = "addBook";
@@ -253,6 +255,13 @@ public class BookLocalServiceClpInvoker {
         _methodName77 = "setBeanIdentifier";
 
         _methodParameterTypes77 = new String[] { "java.lang.String" };
+
+        _methodName82 = "updateBook";
+
+        _methodParameterTypes82 = new String[] {
+                "long", "java.lang.String", "java.lang.String", "java.util.Date",
+                "com.liferay.portal.service.ServiceContext"
+            };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
@@ -493,6 +502,14 @@ public class BookLocalServiceClpInvoker {
             BookLocalServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
+        }
+
+        if (_methodName82.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes82, parameterTypes)) {
+            return BookLocalServiceUtil.updateBook(((Long) arguments[0]).longValue(),
+                (java.lang.String) arguments[1],
+                (java.lang.String) arguments[2], (java.util.Date) arguments[3],
+                (com.liferay.portal.service.ServiceContext) arguments[4]);
         }
 
         throw new UnsupportedOperationException();

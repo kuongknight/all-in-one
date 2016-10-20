@@ -395,4 +395,10 @@ public interface BookLocalService extends BaseLocalService, InvokableLocalServic
     public java.lang.Object invokeMethod(java.lang.String name,
         java.lang.String[] parameterTypes, java.lang.Object[] arguments)
         throws java.lang.Throwable;
+
+    public com.kuongbk.model.Book updateBook(long id, java.lang.String name,
+        java.lang.String description, java.util.Date publishDate,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
 }

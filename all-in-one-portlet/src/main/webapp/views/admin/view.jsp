@@ -1,5 +1,4 @@
 <%@ include file="init.jsp" %>
-<liferay-util:include page="/views/admin/toolbar.jsp" servletContext="<%=this.getServletContext() %>" />
 <c:choose>
 	<c:when test='<%=tabLink.equals("book") %>'>
 		<liferay-util:include page="/views/admin/view_book.jsp" servletContext="<%=this.getServletContext() %>" />

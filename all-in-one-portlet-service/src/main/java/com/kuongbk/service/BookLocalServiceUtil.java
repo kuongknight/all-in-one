@@ -451,6 +451,17 @@ public class BookLocalServiceUtil {
         return getService().invokeMethod(name, parameterTypes, arguments);
     }
 
+    public static com.kuongbk.model.Book updateBook(long id,
+        java.lang.String name, java.lang.String description,
+        java.util.Date publishDate,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return getService()
+                   .updateBook(id, name, description, publishDate,
+            serviceContext);
+    }
+
     public static void clearService() {
         _service = null;
     }
