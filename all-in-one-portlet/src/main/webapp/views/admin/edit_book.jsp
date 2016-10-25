@@ -30,9 +30,11 @@
 		        />
 		    </aui:fieldset>
 		</liferay-ui:panel>
-		<liferay-ui:input-permissions
-		    modelName="<%= Book.class.getName() %>"
-		/>
+		<aui:field-wrapper label="permissions">
+			<liferay-ui:input-permissions
+			    modelName="<%= Book.class.getName() %>"
+			/>
+		</aui:field-wrapper>
 		<aui:button-row>
 			<aui:button type="submit" value="submit"></aui:button>
 			<aui:button type="button" value="draft"></aui:button>
