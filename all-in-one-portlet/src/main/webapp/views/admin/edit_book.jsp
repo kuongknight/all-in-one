@@ -1,9 +1,15 @@
+<%@page import="com.liferay.portal.security.permission.ActionKeys"%>
+<%@page import="com.kuongbk.permissions.AllOnePortletPermission"%>
 <%@page import="com.kuongbk.service.BookLocalServiceUtil"%>
 <%@page import="com.kuongbk.model.Book"%>
 <%@ include file="init.jsp" %>
 <%
-	long bookId = ParamUtil.getLong(request, "bookId",1);
-	Book book = BookLocalServiceUtil.fetchBook(bookId);
+	long bookId = ParamUtil.getLong(request, "bookId");
+	Book book = null;
+	if(bookId != 0){
+		book = BookLocalServiceUtil.fetchBook(bookId);
+	}
+	System.out.println(AllOnePortletPermission.contains(permissionChecker, PortalUtil.getScopeGroupId(request), "ADD_AUTHOR"));
 %>
 <liferay-util:include page="/views/admin/toolbar.jsp" servletContext="<%=this.getServletContext() %>" />
 <div class="edit-book-form">
